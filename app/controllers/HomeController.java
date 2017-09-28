@@ -13,10 +13,10 @@ import play.mvc.Result;
 public class HomeController extends MinioController {
 
     public Result home() {
-        return ok();
+        return ok(views.html.index.render());
     }
 
     public Result outofthebox() {
-        return ok();
+        return ok(views.html.index.render());
     }
 }

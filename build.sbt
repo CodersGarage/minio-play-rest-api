@@ -1,4 +1,4 @@
-name := "minio-play-rest-api"
+name := "riesling-storage-service"
 
 version := "0.2"
 
@@ -16,7 +16,7 @@ libraryDependencies ++= Seq(
   javaJdbc,
   cache,
   javaWs,
-  "io.minio" % "minio" % "3.0.5",
+  "io.minio" % "minio" % "3.0.7",
   "com.eclipsesource.minimal-json" % "minimal-json" % "0.9.4",
   "mysql" % "mysql-connector-java" % "6.0.6",
   "commons-codec" % "commons-codec" % "1.10"

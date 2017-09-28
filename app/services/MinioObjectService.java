@@ -34,7 +34,7 @@ public class MinioObjectService {
             minioConnectionService.getMinioClient().putObject(bucketName, objectName, inputStream, contentType);
             JsonObject data = new JsonObject();
             data.add("object_name", objectName);
-            data.add("object_url", MinioConfig.getMsHost() +
+            data.add("object_url", MinioConfig.getApiHost() +
                     File.separator + "bucket" + File.separator + bucketName +
                     File.separator + "object" + File.separator + objectName);
 

@@ -29,6 +29,8 @@ public class MinioBucketService {
     }
 
     public JsonObject create(String bucketName) {
+        Logger.debug(bucketName);
+
         JsonObject result = new JsonObject();
         try {
             if (!connectionService.getMinioClient().bucketExists(bucketName)) {

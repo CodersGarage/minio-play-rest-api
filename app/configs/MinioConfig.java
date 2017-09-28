@@ -15,23 +15,27 @@ import java.util.UUID;
 public class MinioConfig {
     private static Configuration configuration = Configuration.load(Environment.simple());
 
-    public static String getMsHost() {
-        return configuration.getString("minioConfig.msHost");
+    public static String getApiHost() {
+        return configuration.getString("minio_config.api_host");
     }
 
     public static String getMsUri() {
-        return configuration.getString("minioConfig.msUri");
+        return configuration.getString("minio_config.ms_uri");
     }
 
     public static String getMsSecret() {
-        return configuration.getString("minioConfig.msSecrete");
+        return configuration.getString("minio_config.ms_secrete");
     }
 
     public static String getMsAccessKey() {
-        return configuration.getString("minioConfig.msAccessToken");
+        return configuration.getString("minio_config.ms_accessToken");
     }
 
     public static String getRandomText() {
         return UUID.randomUUID().toString().replaceAll("-", "");
+    }
+
+    public static String getAuthUrl() {
+        return configuration.getString("auth.url");
     }
 }

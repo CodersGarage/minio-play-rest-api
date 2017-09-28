@@ -19,12 +19,12 @@ import java.io.InputStream;
  * := Coffee : Dream : Code
  */
 
-@Security.Authenticated(Authorizer.class)
 public class MinioObjectController extends MinioController {
     private String TAG = this.getClass().getSimpleName();
 
     private MinioObjectService minioObjectService = new MinioObjectService();
 
+    @Security.Authenticated(Authorizer.class)
     public Result create(String bucketName) {
         try {
             Http.MultipartFormData<File> requestedData = request().body().asMultipartFormData();
